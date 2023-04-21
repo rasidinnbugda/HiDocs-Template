@@ -126,6 +126,13 @@ header .nav-content .navbar-menu .nav-item {
   align-items: center;
 }
 
+header .nav-content .navbar-menu .nav-item.content-box {
+  padding: 4px 12px;
+  background-color: var(--bs-gray-200);
+  border-radius: 20px;
+  margin: 0 8px;
+}
+
 header .nav-content .navbar-menu .nav-item:first-child {
   margin-left: 0;
 }
@@ -143,4 +150,20 @@ header .nav-content .navbar-menu .nav-item .nav-link {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   cursor: pointer;
+}
+
+header .nav-content .navbar-menu .nav-item.content-box .nav-link {
+  font-size: 11px;
+}
+
+header .nav-content .navbar-menu .nav-item .nav-link i.bi {
+  font-size: 20px;
+}
+
+header .nav-content .navbar-menu .nav-item .nav-link i.dropdown-icon {
+  font-size: 11px;
+}
+
+header .vr {
+  background-color: var(--bs-dark-rgb);
 }
