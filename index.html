@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="navbar">
+    <header class="navbar sticky-top">
         <nav class="nav-content">
             <div class="me-auto d-flex align-items-center justify-content-center">
                 <a href="index.html" class="nav-brand me-4">
@@ -24,12 +24,30 @@
                 </a>
                 <ul class="navbar-menu">
                     <li class="nav-item content-box">
-                        <a class="nav-link">
+                        <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="nav-text">
-                                v5.2.9
+                                v3.26
                             </span>
                             <i class="bi bi-caret-down-fill dropdown-icon ms-2"></i>
                         </a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li>
+                                <a href="#" class="dropdown-item p-2 d-flex align-items-center justify-content-start active">
+                                    v3.26
+                                    <i class="bi bi-check2 ms-auto"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                    v2.09
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                    v1.22
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item content-box">
                         <a href="#" class="nav-link">
@@ -75,7 +93,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="https://github.com/rasidinnbugda/HiDocs-Template" target="_blank" class="nav-link">
                             <span class="nav-text">
                                 <i class="bi bi-github"></i>
                             </span>
@@ -88,7 +106,7 @@
     <!-- /Header -->
 
     <!-- JS: Bootstrap 5 -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- JS: script.js -->
     <script src="assets/js/script.js"></script>
 </body>

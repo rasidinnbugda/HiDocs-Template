@@ -31,6 +31,8 @@
   --bs-danger: #dc3545;
   --bs-light: #e6e9ec;
   --bs-dark: #212529;
+  --bs-link: rgb(149, 56, 158);
+  --bs-link-disabled: rgba(150, 56, 158, 0.1);
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -126,19 +128,16 @@ header .nav-content .navbar-menu .nav-item {
   align-items: center;
 }
 
-header .nav-content .navbar-menu .nav-item.content-box {
-  padding: 4px 12px;
-  background-color: var(--bs-gray-200);
-  border-radius: 20px;
-  margin: 0 8px;
-}
-
 header .nav-content .navbar-menu .nav-item:first-child {
   margin-left: 0;
 }
 
 header .nav-content .navbar-menu .nav-item:last-child {
   margin-right: 0;
+}
+
+header .nav-content .navbar-menu .nav-item.content-box {
+  margin: 0 8px;
 }
 
 header .nav-content .navbar-menu .nav-item .nav-link {
@@ -152,7 +151,14 @@ header .nav-content .navbar-menu .nav-item .nav-link {
   cursor: pointer;
 }
 
+header .nav-content .navbar-menu .nav-item .nav-link[aria-expanded=true] {
+  color: var(--bs-link);
+}
+
 header .nav-content .navbar-menu .nav-item.content-box .nav-link {
+  padding: 4px 12px;
+  background-color: var(--bs-gray-200);
+  border-radius: 20px;
   font-size: 11px;
 }
 
@@ -164,6 +170,61 @@ header .nav-content .navbar-menu .nav-item .nav-link i.dropdown-icon {
   font-size: 11px;
 }
 
+header .nav-content .navbar-menu .nav-item .nav-link:hover {
+  color: var(--bs-link);
+}
+
 header .vr {
   background-color: var(--bs-dark-rgb);
+}
+
+header .dropdown-menu {
+  width: max-content;
+  box-shadow: 0 10px 40px 0 rgb(104 113 123 / 20%);
+  border: 1px solid #e6e9ec;
+  border-radius: 8px;
+  padding: 6px;
+  overflow: hidden;
+  margin-top: -10px;
+  transition: .3s all;
+  animation: getDropdown .3s ease;
+}
+
+header .dropdown-menu li {
+  margin-top: 2px;
+}
+
+header .dropdown-menu li:first-child {
+  margin-top: 0;
+}
+
+header .dropdown-menu .dropdown-item {
+  font-size: 12px;
+  border-radius: 8px;
+  color: var(--bs-dark-rgb);
+  transition: .3s all;
+}
+
+header .dropdown-menu .dropdown-item:first-child {
+  margin-top: 0;
+}
+
+header .dropdown-menu .dropdown-item.active {
+  color: var(--bs-light-rgb);
+  background-color: var(--bs-link);
+}
+
+header .dropdown-menu .dropdown-item:hover:not(.active) {
+  background-color: var(--bs-link-disabled);
+}
+
+@keyframes getDropdown {
+  0% {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
 }
