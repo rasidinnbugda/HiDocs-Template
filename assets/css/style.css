@@ -287,16 +287,49 @@ header .dropdown-menu .dropdown-item:hover:not(.active) {
   padding: 0 var(--mp-0-25);
   margin-top: var(--mp-0-625);
   margin-bottom: 0;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  height: 100%;
+  max-height: calc(100% - 108px);
+}
+
+.sidebar .chapter-area::-webkit-scrollbar {
+  width: .875rem;
+  background-clip: content-box;
+  border: 5px solid transparent;
+  border-radius: .5rem;
+  opacity: 0;
+  height: 100%;
+}
+
+.sidebar .chapter-area::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: var(--bs-gray-400);
+  border: 5px solid transparent;
+  border-radius: .5rem;
+}
+
+.sidebar .chapter-area .chapter-item {
+  margin-bottom: var(--mp-0-25);
+}
+
+.sidebar .chapter-area .chapter-item.title-item {
+  padding-left: 0;
+}
+
+.sidebar .chapter-area .chapter-item.title-item:not(:first-child) {
+  margin-top: var(--mp-0-875);
 }
 
 .sidebar .chapter-area .chapter-item.title-item a {
-  color: var(--gray-600);
+  color: var(--gray-700);
   font-weight: var(--f-semibold);
-  font-size: var(--f-0-875);
+  font-size: 15px;
+  border: none;
 }
 
 .sidebar .chapter-area .chapter-item.title-item a:hover {
-  color: var(--gray-600);
+  color: var(--gray-700);
 }
 
 .sidebar .chapter-area .chapter-item a {
@@ -307,4 +340,12 @@ header .dropdown-menu .dropdown-item:hover:not(.active) {
 
 .sidebar .chapter-area .chapter-item a:hover {
   color: var(--first-color);
+}
+
+/* === Main === */
+main {
+  width: calc(100% - 270px);
+  min-height: calc(100vh - 60px);
+  margin-left: 270px;
+  padding: var(--mp-1) var(--mp-1-25);
 }
