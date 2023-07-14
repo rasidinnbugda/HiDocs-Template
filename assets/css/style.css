@@ -72,9 +72,14 @@ body {
   background-color: var(--bg-color);
   color: var(--gray-800);
   font-family: var(--f-family);
-  font-size: var(--f-1);
+  font-size: var(--f-0-875);
   font-weight: var(--f-normal);
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--first-color);
 }
 
 /* === Header === */
@@ -274,5 +279,32 @@ header .dropdown-menu .dropdown-item:hover:not(.active) {
 }
 
 .sidebar .search-area .search-box .icon-box:hover {
+  color: var(--first-color);
+}
+
+.sidebar .chapter-area {
+  list-style: none;
+  padding: 0 var(--mp-0-25);
+  margin-top: var(--mp-0-625);
+  margin-bottom: 0;
+}
+
+.sidebar .chapter-area .chapter-item.title-item a {
+  color: var(--gray-600);
+  font-weight: var(--f-semibold);
+  font-size: var(--f-0-875);
+}
+
+.sidebar .chapter-area .chapter-item.title-item a:hover {
+  color: var(--gray-600);
+}
+
+.sidebar .chapter-area .chapter-item a {
+  color: var(--gray-600);
+  font-size: 13px;
+  transition: .3s all;
+}
+
+.sidebar .chapter-area .chapter-item a:hover {
   color: var(--first-color);
 }
